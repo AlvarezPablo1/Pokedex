@@ -3,7 +3,7 @@ import ListadoPokemonsItem from "../components/ListadoPokemonsItem";
 import {buscarPokemons} from "../services/pokemon.queries";
 import {Pokemon} from "../types/pokemon.types";
 import {extractPokemonId} from "../services/pokemon.services";
-
+import styles from "../assets/css/ListadoPokemon.module.css"
 
 interface Props {
     name: string,
@@ -36,7 +36,7 @@ const ListadoPokemons = ({name, seleccionarPokemon} : Props) => {
     if (isLoading) return <div>Cargando pokemons...</div>
 
     return (
-        <div id="listadoCategorias">
+        <div className={styles.listadoCategorias}>
             {pokemons && pokemons.map((pokemon: Pokemon) => (
                 <ListadoPokemonsItem pokemon={pokemon}
                     seleccionarPokemon={seleccionarPokemon}

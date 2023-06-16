@@ -1,0 +1,35 @@
+.listadoCategorias {
+  width: auto;
+  flex-direction: column;
+  overflow-y: scroll;
+  align-items: flex-start;
+  text-align: left;
+  max-height: 80vh;
+}
+
+.listadoCategorias div {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid;
+}
+
+.listadoCategorias div:hover {
+  cursor: pointer;
+  background-color: lightpink;
+}
+
+.listadoCategorias::-webkit-scrollbar {
+  width: 4px;
+}
+
+.listadoCategorias::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.listadoCategorias::-webkit-scrollbar-thumb {
+  background: #ed5564;
+}
+
+.listadoCategorias::-webkit-scrollbar-thumb:hover {
+  background: #d24150;
+}

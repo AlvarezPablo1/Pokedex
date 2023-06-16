@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {Pokemon} from "../types/pokemon.types";
 import { getPokemon } from "../services/pokemon.queries";
-
+import styles from "../assets/css/VistaPokemon.module.css"
 
 interface Props {   
     pokemonSeleccionado: Pokemon | null
@@ -37,7 +37,7 @@ const VistaPokemon = ({ pokemonSeleccionado} : Props) => {
 
 
     return pokemons ? (
-        <div className="vistaPokemon">
+        <div className={styles.vistaCategoria}>
             <section key={pokemons.id}>
                 <h3>{pokemons.name}</h3>
                 <img src={pokemons.sprites.other.home.front_default} alt={pokemons.name}/>
