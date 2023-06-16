@@ -4,7 +4,6 @@
  * @author Digital House
  * @see https://pokeapi.co/api/v2/item-category
  */
-import {Sprite} from "../types/sprite.types";
 
 
 export interface Pokemon {
@@ -15,4 +14,13 @@ export interface Pokemon {
 export interface PokemonWithProps extends Pokemon{
     id: number;
     sprites: Sprite
+}
+
+export interface Sprite {
+    "default": string;
+    other: {
+        home: {
+            front_default: string;
+        };
+    }
 }
