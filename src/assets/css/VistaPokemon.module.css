@@ -1,3 +1,11 @@
 .vistaCategoria {
   text-align: center;
 }
+
+
+@media(max-width:468px){
+  .vistaCategoria img{
+    width: 100px;
+  }
+}
+

@@ -11,6 +11,7 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid;
+
 }
 
 .listadoCategorias div:hover {
@@ -32,4 +33,43 @@
 
 .listadoCategorias::-webkit-scrollbar-thumb:hover {
   background: #d24150;
+}
+
+
+@media(max-width:768px){
+  .listadoCategorias {
+    width: 676px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .listadoCategorias div {
+    border-right: 1px solid;
+  }
+  
+}
+
+
+@media(max-width:468px){
+  .listadoCategorias {
+    width: 420px;
+    display: flex;
+    flex-direction: row;
+  } 
+}
+
+@media(max-width:375px){
+  .listadoCategorias {
+    width: 371px;
+    display: flex;
+    flex-direction: row;
+  } 
+}
+
+@media(max-width:320px){
+  .listadoCategorias {
+    width: 315px;
+    display: flex;
+    flex-direction: row;
+  } 
 }
