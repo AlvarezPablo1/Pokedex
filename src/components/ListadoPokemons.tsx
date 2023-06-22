@@ -4,9 +4,9 @@ import {buscarPokemons} from "../services/pokemon.queries";
 import {Pokemon} from "../types/pokemon.types";
 import {extractPokemonId} from "../services/pokemon.services";
 import styles from "../assets/css/ListadoPokemon.module.css"
+import { useAppSelector } from "../redux/hooks";
 
 interface Props {
-    name: string,
     seleccionarPokemon: (pokemon: Pokemon) => void;
 }
 
@@ -21,7 +21,8 @@ interface Props {
  * @param seleccionarPokemon una funcion que se ejecuta al hacer click en el pokemon y guarda en un estado el pokemon seleccionado
  * @author Digital House
  */
-const ListadoPokemons = ({name, seleccionarPokemon} : Props) => {
+const ListadoPokemons = ({ seleccionarPokemon} : Props) => {
+    const name = useAppSelector((state) => state.pokemonName)
     const [isLoading, setLoading] = useState(true);
     const [pokemons, setPokemons] = useState<Pokemon[] | null>(null);
 
